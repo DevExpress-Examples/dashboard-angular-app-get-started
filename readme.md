@@ -1,4 +1,4 @@
-## Dashboard Client-Side Application (Angular)
+# Dashboard Client-Side Application (Angular)
 
 This example is a ready-to-use client Angular application with the DevExpress Dashboard component.
 
