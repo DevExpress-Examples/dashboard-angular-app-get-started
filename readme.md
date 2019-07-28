@@ -10,7 +10,7 @@ The server project hosts on ```https://demos.devexpress.com/services/dashboard/a
 
 The [JS](JS) folder contains a client application.
 
-## Launch HTML JavaScript Dashboard
+## Quick Start
 
 1. Open the **JS** folder. In the command prompt, download and install npm packages used in the application:
 
