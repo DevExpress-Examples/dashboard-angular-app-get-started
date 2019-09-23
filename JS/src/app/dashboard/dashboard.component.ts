@@ -1,8 +1,5 @@
-import * as Globalize from 'globalize';
-declare var require: (e: string) => object;
-
 import { Component, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
-import { DashboardControl, ResourceManager, DashboardPanelExtension } from 'devexpress-dashboard';
+import { DashboardControl, ResourceManager } from 'devexpress-dashboard';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,16 +10,7 @@ import { DashboardControl, ResourceManager, DashboardPanelExtension } from 'deve
 export class DashboardComponent implements AfterViewInit, OnDestroy {
   private dashboardControl!: DashboardControl;
   constructor(private element: ElementRef) {
-    this.initGlobalize();
     ResourceManager.embedBundledResources();
-  }
-  initGlobalize() {
-    Globalize.load([
-      require('devextreme-cldr-data/en.json'),
-      //require('devextreme-cldr-data/de.json'),
-      require('devextreme-cldr-data/supplemental.json')
-    ]);
-    Globalize.locale('en');
   }
   ngAfterViewInit(): void {
     this.dashboardControl = new DashboardControl(this.element.nativeElement.querySelector(".dashboard-container"), {
