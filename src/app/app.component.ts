@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard-angular-app';
+  workingMode: string = 'Designer';
+  get workingModeText() {
+    return 'Switch to ' + this.toggleMode(this.workingMode);
+  }
+  
+  changeWorkingMode() {    
+    this.workingMode = this.toggleMode(this.workingMode);
+  }
+  toggleMode(mode) {
+    return mode === 'Viewer' ? "Designer" : "Viewer";
+  }
+
 }

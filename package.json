@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@devexpress/analytics-core": "20.2-next",
+    "devexpress-dashboard": "20.2-next",
+    "devexpress-dashboard-angular": "20.2-next",
+    "devextreme": "20.2-next",
+    "devextreme-angular": "20.2-next",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
