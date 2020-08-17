@@ -2,7 +2,7 @@
 
 This example is a ready-to-use client Angular application with the DevExpress Dashboard component.
 
-> **Documentation**: [Client-Side Configuration (Angular)](https://docs.devexpress.com/Dashboard/400409)
+> **Documentation**: [Client-Side Configuration (Angular)](https://docs.devexpress.com/Dashboard/400409?v=20.2)
 
 The example uses a modular approach that based on the client-server model. You need a server (backend) project and a client (frontend) application that includes all the necessary styles, scripts and HTML-templates. Note that the script version on the client should match with libraries version on the server up to a minor version.
 
