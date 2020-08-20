@@ -6,25 +6,25 @@ This example is a ready-to-use client Angular application with the DevExpress Da
 
 The example uses a modular approach that based on the client-server model. You need a server (backend) project and a client (frontend) application that includes all the necessary styles, scripts and HTML-templates. Note that the script version on the client should match with libraries version on the server up to a minor version.
 
-The server project hosts on ```https://demos.devexpress.com/services/dashboard/api```.
-
-The [JS](JS) folder contains a client application.
+- The [asp-net-core-server](asp-net-core-server) folder contains an ASP.NET Core 3.1 Dashboard application.
+- The [dashboard-angular-app](dashboard-angular-app) folder contains a client application.
 
 ## Quick Start
 
-1. Open the **JS** folder. In the command prompt, download and install npm packages used in the application:
+In the **asp-net-core-server** folder run the following command:
 
-    ```
-    npm install
-    ```
+```
+dotnet run
+```
 
-2. In the same folder, run the following command to compile and run the application:
+In the **dashboard-angular-app** folder, run the following commands:
 
-    ```bash
-    ng serve --open
-    ```
+```
+npm i
+ng serve --open
+```
 
-3. Open ```http://localhost:4200/``` in your browser to see the result. The HTML JavaScript Dashboard displays the dashboard stored on the preconfigured server (```https://demos.devexpress.com/services/dashboard/api```).
+Open ```http://localhost:4200/``` in your browser to see the result.
 
 ## See Also
 Documentation:
