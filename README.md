@@ -20,8 +20,7 @@ dotnet run
 In the **dashboard-angular-app** folder, run the following commands:
 
 ```
-npm i
-ng serve --open
+npm start
 ```
 
 Open ```http://localhost:4200/``` in your browser to see the result.
