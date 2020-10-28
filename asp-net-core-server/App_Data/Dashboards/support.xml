@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Support" />
+  <DataSources>
+    <JsonDataSource Name="Support" RootElement="Employee" ComponentName="jsonDataSource1">
+      <Source SourceType="DevExpress.DataAccess.Json.UriJsonSource" />
+      <Schema>
+        <Node Name="root" Type="System.Object" Selected="true" NodeType="Object">
+          <Node Name="Employee" Selected="true" NodeType="Array">
+            <Node Name="Employee" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="IssueType" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="ProductName" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="ResolvedTime (Sum)" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+    <JsonDataSource Name="Categories" RootElement="Products" ComponentName="jsonDataSource2">
+      <Source SourceType="DevExpress.DataAccess.Json.UriJsonSource" />
+      <Schema>
+        <Node Name="root" Type="System.Object" Selected="true" NodeType="Object">
+          <Node Name="CategoryId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          <Node Name="CategoryName" Type="System.String" Selected="true" NodeType="Property" />
+          <Node Name="Description" Type="System.String" Selected="true" NodeType="Property" />
+          <Node Name="Products" Selected="true" NodeType="Array">
+            <Node Name="CategoryId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Discontinued" Type="System.Nullable`1[System.Boolean]" Selected="true" NodeType="Property" />
+            <Node Name="ProductId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="ProductName" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="QuantityPerUnit" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="ReorderLevel" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Supplier" Type="System.Object" Selected="true" NodeType="Property" />
+            <Node Name="SupplierId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitPrice" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsInStock" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsOnOrder" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Platform" DataSource="jsonDataSource1" ShowAllValue="false" ListBoxType="Radio">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="ProductName" DefaultId="DataItem0" />
+        <Measure DataMember="ResolvedTime (Sum)" DefaultId="DataItem2" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem2" />
+      </HiddenMeasures>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Chart ComponentName="chartDashboardItem2" Name="Bug Count" DataSource="jsonDataSource1">
+      <DataItems>
+        <Measure DataMember="ResolvedTime (Sum)" DefaultId="DataItem0" />
+        <Dimension DataMember="Employee" DefaultId="DataItem1" />
+        <Dimension DataMember="IssueType" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup>
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="0.3027932960893855" />
+        <LayoutItem DashboardItem="chartDashboardItem2" Weight="1.6972067039106145" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
