@@ -12,6 +12,9 @@ using System;
 
 namespace AspNetCoreDashboardBackend {
     public class Startup {
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             Configuration = configuration;
             FileProvider = hostingEnvironment.ContentRootFileProvider;
@@ -20,9 +23,10 @@ namespace AspNetCoreDashboardBackend {
         public IConfiguration Configuration { get; }
         public IFileProvider FileProvider { get; }
 
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+            // Configures services to use the Web Dashboard Control.
             services
-                // Configures CORS policies.                
                 .AddCors(options => {
                     options.AddPolicy("CorsPolicy", builder => {
                         builder.AllowAnyOrigin();
@@ -30,24 +34,21 @@ namespace AspNetCoreDashboardBackend {
                         builder.WithHeaders("Content-Type");
                     });
                 })
-                // Adds the DevExpress middleware.
                 .AddDevExpressControls()
-                // Adds controllers.
                 .AddControllers()
-                // Configures the dashboard backend.
                 .AddDefaultDashboardController(configurator => {
                     configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
                     configurator.SetDataSourceStorage(CreateDataSourceStorage());
+                    configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
                     configurator.ConfigureDataConnection += Configurator_ConfigureDataConnection;
                 });
         }
 
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
-            // Registers the DevExpress middleware.            
+            // Registers the DevExpress middleware.
             app.UseDevExpressControls();
-            // Registers routing.
             app.UseRouting();
-            // Registers CORS policies.
             app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints => {
                 // Maps the dashboard route.
@@ -56,16 +57,28 @@ namespace AspNetCoreDashboardBackend {
                 endpoints.MapControllers().RequireCors("CorsPolicy");
             });
         }
+
         public DataSourceInMemoryStorage CreateDataSourceStorage() {
             DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
-            DashboardJsonDataSource jsonDataSource = new DashboardJsonDataSource("Customers");
-            jsonDataSource.RootElement = "Customers";
-            dataSourceStorage.RegisterDataSource("jsonDataSourceSupport", jsonDataSource.SaveToXml());
+                        
+            DashboardJsonDataSource jsonDataSourceSupport = new DashboardJsonDataSource("Support");
+            jsonDataSourceSupport.RootElement = "Employee";
+            dataSourceStorage.RegisterDataSource("jsonDataSourceSupport", jsonDataSourceSupport.SaveToXml());
+
+            DashboardJsonDataSource jsonDataSourceCategories = new DashboardJsonDataSource("Categories");
+            jsonDataSourceCategories.RootElement = "Products";
+            dataSourceStorage.RegisterDataSource("jsonDataSourceCategories", jsonDataSourceCategories.SaveToXml());
             return dataSourceStorage;
         }
         private void Configurator_ConfigureDataConnection(object sender, ConfigureDataConnectionWebEventArgs e) {
-            if (e.DataSourceName.Contains("Customers")) {
-                Uri fileUri = new Uri("https://raw.githubusercontent.com/DevExpress-Examples/DataSources/master/JSON/customers.json");
+            if (e.DataSourceName.Contains("Support")) {
+                Uri fileUri = new Uri(FileProvider.GetFileInfo("App_data/Support.json").PhysicalPath, UriKind.RelativeOrAbsolute);
+                JsonSourceConnectionParameters jsonParams = new JsonSourceConnectionParameters();
+                jsonParams.JsonSource = new UriJsonSource(fileUri);
+                e.ConnectionParameters = jsonParams;
+            }
+            if (e.DataSourceName.Contains("Categories")) {
+                Uri fileUri = new Uri(FileProvider.GetFileInfo("App_data/Categories.json").PhysicalPath, UriKind.RelativeOrAbsolute);
                 JsonSourceConnectionParameters jsonParams = new JsonSourceConnectionParameters();
                 jsonParams.JsonSource = new UriJsonSource(fileUri);
                 e.ConnectionParameters = jsonParams;
