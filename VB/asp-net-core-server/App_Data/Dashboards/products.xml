@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Products" />
+  <DataSources>
+    <JsonDataSource Name="Categories" RootElement="Products" ComponentName="jsonDataSource1">
+      <Source SourceType="DevExpress.DataAccess.Json.UriJsonSource" />
+      <Schema>
+        <Node Name="root" Type="System.Object" Selected="true" NodeType="Object">
+          <Node Name="CategoryId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          <Node Name="CategoryName" Type="System.String" Selected="true" NodeType="Property" />
+          <Node Name="Description" Type="System.String" Selected="true" NodeType="Property" />
+          <Node Name="Products" Selected="true" NodeType="Array">
+            <Node Name="CategoryId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Discontinued" Type="System.Nullable`1[System.Boolean]" Selected="true" NodeType="Property" />
+            <Node Name="ProductId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="ProductName" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="QuantityPerUnit" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="ReorderLevel" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Supplier" Type="System.Object" Selected="true" NodeType="Property" />
+            <Node Name="SupplierId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitPrice" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsInStock" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsOnOrder" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Card ComponentName="cardDashboardItem1" Name="Products" DataSource="jsonDataSource1">
+      <DataItems>
+        <Dimension DataMember="ProductName" DefaultId="DataItem0" />
+        <Dimension DataMember="QuantityPerUnit" DefaultId="DataItem1" />
+        <Measure DataMember="UnitPrice" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem2" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="270" MaxWidth="270" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="cardDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
