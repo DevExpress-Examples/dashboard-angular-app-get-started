@@ -3,6 +3,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.2.6" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.2.7" />
   </ItemGroup>
 </Project>
