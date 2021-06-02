@@ -22,7 +22,7 @@
     "@devexpress/analytics-core": "20.2-stable",
     "devexpress-dashboard": "20.2-stable",
     "devexpress-dashboard-angular": "20.2-stable",
-    "devextreme": "20.2-next",
+    "devextreme": "20.2-stable",
     "devextreme-angular": "20.2-stable",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
