@@ -2,6 +2,7 @@
 *Files to look at*:
 
 * [app.component.html](./dashboard-angular-app/src/app/app.component.html)
+* [Startup.cs](./asp-net-core-server/Startup.cs)
 <!-- default file list end -->
 
 # Dashoboard for Angular - Get Started - Client-Side Dashboard Application
