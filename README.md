@@ -1,4 +1,4 @@
-# Get Started - Client-Side Dashboard Application built with Angular
+# Dashoboard for Angular - Get Started - Client-Side Dashboard Application
 
 This project demonstrates how you can incorporate a DevExpress Dashboard component into a client-side app built with Angular. Use it as a template when you need to create a similar web application.
 
