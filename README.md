@@ -34,8 +34,9 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 
 ## Documentation
 
-- [Create an Angular Dashboard Application](https://docs.devexpress.com/Dashboard/400322?v=20.2)
-- [Dashboard Component for Angular](https://docs.devexpress.com/Dashboard/401976?v=20.2)
+- [Create an Angular Dashboard Application](https://docs.devexpress.com/Dashboard/400322)
+- [Dashboard Component for Angular](https://docs.devexpress.com/Dashboard/401976)
+- [Install DevExpress Controls Using NuGet Packages](https://docs.devexpress.com/GeneralInformation/115912/installation/install-devexpress-controls-using-nuget-packages)
 
 ## Examples
 - [Dashboard Component for Angular - Configuration](https://github.com/DevExpress-Examples/dashboard-angular-example)
