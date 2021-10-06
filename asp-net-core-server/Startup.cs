@@ -36,14 +36,14 @@ namespace AspNetCoreDashboardBackend {
                 })
                 .AddDevExpressControls()
                 .AddControllers();
-                services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
-                    DashboardConfigurator configurator = new DashboardConfigurator();
-                    configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
-                    configurator.SetDataSourceStorage(CreateDataSourceStorage());
-                    configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
-                    configurator.ConfigureDataConnection += Configurator_ConfigureDataConnection;
-                    return configurator;
-                });
+            services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
+                DashboardConfigurator configurator = new DashboardConfigurator();
+                configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
+                configurator.SetDataSourceStorage(CreateDataSourceStorage());
+                configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
+                configurator.ConfigureDataConnection += Configurator_ConfigureDataConnection;
+                return configurator;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
