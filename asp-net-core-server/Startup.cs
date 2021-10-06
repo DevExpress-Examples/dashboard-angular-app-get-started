@@ -35,12 +35,14 @@ namespace AspNetCoreDashboardBackend {
                     });
                 })
                 .AddDevExpressControls()
-                .AddControllers()
-                .AddDefaultDashboardController(configurator => {
+                .AddControllers();
+                services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
+                    DashboardConfigurator configurator = new DashboardConfigurator();
                     configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
                     configurator.SetDataSourceStorage(CreateDataSourceStorage());
                     configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
                     configurator.ConfigureDataConnection += Configurator_ConfigureDataConnection;
+                    return configurator;
                 });
         }
 
@@ -52,7 +54,7 @@ namespace AspNetCoreDashboardBackend {
             app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints => {
                 // Maps the dashboard route.
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
                 // Requires CORS policies.
                 endpoints.MapControllers().RequireCors("CorsPolicy");
             });
