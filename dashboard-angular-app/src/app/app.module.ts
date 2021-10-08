@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DxDashboardControlModule } from 'devexpress-dashboard-angular';
-import { DxButtonModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -11,8 +10,7 @@ import { DxButtonModule } from 'devextreme-angular';
   ],
   imports: [
     BrowserModule,
-    DxDashboardControlModule,
-    DxButtonModule
+    DxDashboardControlModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
