@@ -1,5 +1,4 @@
-@import url("../node_modules/jquery-ui/themes/base/all.css");  
-@import url("../node_modules/devextreme/dist/css/dx.common.css");  
+@import url("../node_modules/jquery-ui/themes/base/all.css");
 @import url("../node_modules/devextreme/dist/css/dx.light.css");  
 @import url("../node_modules/@devexpress/analytics-core/dist/css/dx-analytics.common.css");  
 @import url("../node_modules/@devexpress/analytics-core/dist/css/dx-analytics.light.css");  
