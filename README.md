@@ -22,7 +22,7 @@ dotnet run
 
 See the following section for information on how to install NuGet packages from the DevExpress NuGet feed: [Install DevExpress Controls Using NuGet Packages](https://docs.devexpress.com/GeneralInformation/115912/installation/install-devexpress-controls-using-nuget-packages).
 
-This server allows CORS requests from _all_ origins with _any_ scheme (http or https). This default configuration is insecure: websites can make cross-origin requests to the app. We recommend that you specify the client application's URL to prohibit other clients from accessing sensitive information stored on the server. More information: [Cross-Origin Resource Sharing (CORS)](https://docs.devexpress.com/Dashboard/400709)
+> This server allows CORS requests from _all_ origins with _any_ scheme (http or https). This default configuration is insecure: websites can make cross-origin requests to the app. We recommend that you specify the client application's URL to prohibit other clients from accessing sensitive information stored on the server. More information: [Cross-Origin Resource Sharing (CORS)](https://docs.devexpress.com/Dashboard/400709)
 
 In the **dashboard-angular-app** folder, run the following commands:
 
