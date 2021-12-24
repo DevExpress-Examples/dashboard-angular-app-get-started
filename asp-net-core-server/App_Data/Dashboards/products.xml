@@ -2,7 +2,7 @@
 <Dashboard>
   <Title Text="Products" />
   <DataSources>
-    <JsonDataSource Name="Categories" RootElement="Products" ComponentName="jsonDataSource1">
+    <JsonDataSource Name="Categories" RootElement="Products" ComponentName="jsonDataSource1" ConnectionName="jsonCategories">
       <Source SourceType="DevExpress.DataAccess.Json.UriJsonSource" />
       <Schema>
         <Node Name="root" Type="System.Object" Selected="true" NodeType="Object">
