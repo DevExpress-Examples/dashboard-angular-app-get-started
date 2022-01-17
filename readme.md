@@ -13,7 +13,7 @@ The example uses a modular approach that based on the client-server model. You n
 
 The server project hosts on ```https://demos.devexpress.com/services/dashboard/api```.
 
-The [JS](JS) folder contains a client application.
+The [JS](CS/JS) folder contains a client application.
 
 ## Quick Start
 
