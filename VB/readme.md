@@ -1,12 +1,3 @@
-<!-- default badges list -->
-<<<<<<< HEAD
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/199031557/19.2.3%2B)
-=======
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/199031557/19.1.4%2B)
->>>>>>> 19.1.4+
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T828585)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Dashboard Client-Side Application (Angular)
 
 This example is a ready-to-use client Angular application with the DevExpress Dashboard component.
@@ -17,7 +8,7 @@ The example uses a modular approach that based on the client-server model. You n
 
 The server project hosts on ```https://demos.devexpress.com/services/dashboard/api```.
 
-The [JS](CS/JS) folder contains a client application.
+The [JS](JS) folder contains a client application.
 
 ## Quick Start
 
