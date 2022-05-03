@@ -306,3 +306,5 @@ TesterMetadata.xml
 
 # Backup files
 .bak
+dashboard-angular-app/.vscode
+dashboard-angular-app/package-lock.json
