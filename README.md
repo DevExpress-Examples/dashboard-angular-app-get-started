@@ -55,4 +55,4 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 - [Dashboard Component for Angular - Configuration](https://github.com/DevExpress-Examples/dashboard-angular-app-configuration)
 - [Get Started - Client-Side Dashboard Application (React)](https://github.com/DevExpress-Examples/dashboard-react-app-get-started)
 - [Get Started - Client-Side Dashboard Application (Vue)](https://github.com/DevExpress-Examples/dashboard-vue-app-get-started)
-- [ASP.NET Core 3.1 backend for Web Dashboard](https://github.com/DevExpress-Examples/asp-net-core-dashboard-backend)
+- [ASP.NET Core backend for Web Dashboard](https://github.com/DevExpress-Examples/asp-net-core-dashboard-backend)
