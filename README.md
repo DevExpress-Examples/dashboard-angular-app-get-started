@@ -40,7 +40,7 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 ## Files to Review
 
 * [app.component.html](./dashboard-angular-app/src/app/app.component.html)
-* [Startup.cs](./asp-net-core-server/Startup.cs)
+* [Program.cs](./asp-net-core-server/Program.cs)
 
 ## Documentation
 
