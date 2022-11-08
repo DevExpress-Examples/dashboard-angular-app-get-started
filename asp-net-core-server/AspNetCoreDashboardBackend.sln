@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreDashboardBackend", "AspNetCoreDashboardBackend.csproj", "{19ECC4B8-0052-4270-88D2-0E9DAA8CD7D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asp-net-core-server", "asp-net-core-server.csproj", "{C8AA0760-B20C-4F63-AAB3-959A7A4BE740}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{19ECC4B8-0052-4270-88D2-0E9DAA8CD7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19ECC4B8-0052-4270-88D2-0E9DAA8CD7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19ECC4B8-0052-4270-88D2-0E9DAA8CD7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19ECC4B8-0052-4270-88D2-0E9DAA8CD7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8AA0760-B20C-4F63-AAB3-959A7A4BE740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8AA0760-B20C-4F63-AAB3-959A7A4BE740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8AA0760-B20C-4F63-AAB3-959A7A4BE740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8AA0760-B20C-4F63-AAB3-959A7A4BE740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F0C8B33A-17C7-4A6C-93F9-100D00654BED}
+		SolutionGuid = {15ED6E2B-FDE2-4DEB-A6BB-498DE2052884}
 	EndGlobalSection
 EndGlobal
