@@ -11,7 +11,7 @@ This project demonstrates how to incorporate a DevExpress Dashboard component in
 
 The example uses a modular client-server approach. The server (backend) project communicates with the client (frontend) application that includes all the necessary styles, scripts, and HTML templates. Note that the script version on the client should match the version of libraries on the server.
 
-- The [asp-net-core-server](./asp-net-core-server) folder contains the backend project built with .NET 6.
+- The [asp-net-core-server](./asp-net-core-server) folder contains the backend project that targets .NET 6.
 - The [dashboard-angular-app](./dashboard-angular-app) folder contains the client application built with Angular.
 
 ## Quick Start
