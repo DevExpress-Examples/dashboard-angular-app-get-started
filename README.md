@@ -1,5 +1,4 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/199031557/22.1.1%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T828585)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
@@ -12,7 +11,7 @@ This project demonstrates how to incorporate a DevExpress Dashboard component in
 
 The example uses a modular client-server approach. The server (backend) project communicates with the client (frontend) application that includes all the necessary styles, scripts, and HTML templates. Note that the script version on the client should match the version of libraries on the server.
 
-- The [asp-net-core-server](./asp-net-core-server) folder contains the backend project built with ASP.NET Core 3.1.
+- The [asp-net-core-server](./asp-net-core-server) folder contains the backend project that targets .NET 6.
 - The [dashboard-angular-app](./dashboard-angular-app) folder contains the client application built with Angular.
 
 ## Quick Start
@@ -41,7 +40,7 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 ## Files to Review
 
 * [app.component.html](./dashboard-angular-app/src/app/app.component.html)
-* [Startup.cs](./asp-net-core-server/Startup.cs)
+* [Program.cs](./asp-net-core-server/Program.cs)
 
 ## Documentation
 
