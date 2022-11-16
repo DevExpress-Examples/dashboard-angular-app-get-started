@@ -76,7 +76,7 @@ app.UseRouting();
 app.UseCors("CorsPolicy");
 
 // Maps the dashboard route.
-EndpointRouteBuilderExtension.MapDashboardRoute(app, "api/dashboard", "DefaultDashboard");
+app.MapDashboardRoute("api/dashboard", "DefaultDashboard");
 // Requires CORS policies.
 app.MapControllers().RequireCors("CorsPolicy");
 
