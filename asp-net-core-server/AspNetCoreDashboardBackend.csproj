@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.1.*" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.2.*" />
   </ItemGroup>
 
 </Project>
