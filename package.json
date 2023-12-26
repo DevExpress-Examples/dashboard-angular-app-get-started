@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@devexpress/analytics-core": "^23.2.3",
-    "devexpress-dashboard": "^23.2.3",
-    "devexpress-dashboard-angular": "^23.2.3",
-    "devextreme": "^23.2.3",
-    "devextreme-angular": "^23.2.3"
-  }
-}
