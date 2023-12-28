@@ -7,9 +7,9 @@ import { DxDashboardControlModule } from 'devexpress-dashboard-angular';
   selector: 'app-root',
   standalone: true,
   imports: [
-	CommonModule, 
-	RouterOutlet, 
-	DxDashboardControlModule],
+  	CommonModule, 
+  	RouterOutlet, 
+  	DxDashboardControlModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
