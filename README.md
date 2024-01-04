@@ -41,6 +41,7 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 ## Files to Review
 
 * [app.component.html](./dashboard-angular-app/src/app/app.component.html)
+* [app.component.ts](dashboard-angular-app/src/app/app.component.ts)
 * [Program.cs](./asp-net-core-server/Program.cs)
 
 ## Documentation
