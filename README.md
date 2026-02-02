@@ -18,7 +18,7 @@ The example uses a modular client-server approach. The server (backend) project 
 
 ## Quick Start
 
-Run the following command in the **asp-net-core-server** folder:
+Run the following command in the *asp-net-core-server* folder:
 
 ```
 dotnet run
@@ -30,7 +30,7 @@ See the following section for information on how to install NuGet packages from 
 
 > This server allows CORS requests from _all_ origins with _any_ scheme (http or https). This default configuration is insecure: websites can make cross-origin requests to the app. We recommend that you specify the client application's URL to prohibit other clients from accessing sensitive information stored on the server. More information: [Cross-Origin Resource Sharing (CORS)](https://docs.devexpress.com/Dashboard/400709).
 
-In the **dashboard-angular-app** folder, run the following commands:
+In the *dashboard-angular-app* folder, run the following commands:
 
 ```
 npm install
@@ -41,8 +41,8 @@ Open ```http://localhost:4200/``` in your browser to see the result.
 
 ## Files to Review
 
-* [app.component.html](./dashboard-angular-app/src/app/app.component.html)
-* [app.component.ts](dashboard-angular-app/src/app/app.component.ts)
+* [app.html](./dashboard-angular-app/src/app/app.html)
+* [app.ts](dashboard-angular-app/src/app/app.ts)
 * [Program.cs](./asp-net-core-server/Program.cs)
 
 ## Documentation

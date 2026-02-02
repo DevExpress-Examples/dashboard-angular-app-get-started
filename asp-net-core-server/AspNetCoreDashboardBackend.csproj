@@ -7,7 +7,7 @@
     <RootNamespace>asp_net_core_server</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="25.2.*-*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 </Project>
